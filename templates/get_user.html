@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <br><ol>
+    {% for user in persona %}
+        <li>Nombre: {{ user.nombre}}, Apellido: {{user.apellido}}, Registrado: {{ user.edad}},<br>contacto: {{ user.mail}}</li>
+    {% endfor %}
+</ol>
+    <dl>
+    {% for user in persona %}
+        <dt>Nombre: {{ user.nombre}}, Apellido: {{user.apellido}}, Registrado: {{ user.edad}},</dt>
+        <dd>contacto: {{ user.mail}}</dd>
+    {% endfor %}
+    </dl>
+</body>
+</html>

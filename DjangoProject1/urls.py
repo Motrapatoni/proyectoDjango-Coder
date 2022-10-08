@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import hola, dia_de_hoy, nombre, vista_template, post_person, get_persons
 
 urlpatterns = [
+    path('hola/', hola),
+    path('crear/<str:name>/<str:lastname>/<str:email>/', post_person),
+    path('mostrar/', get_persons),
+    path('dia/', dia_de_hoy),
+    path('nombre/<nombre>/', nombre),
+    path('api/', vista_template),
     path('admin/', admin.site.urls),
 ]
